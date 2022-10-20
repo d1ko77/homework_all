@@ -18,7 +18,7 @@ void Sort(int[] arr)
 {
     Console.WriteLine("Отсортированный массив:");
     int temp = 0;
-    for (int i = 0; i < arr.Length; i++)
+    for (int i = 0; i < arr.Length -1; i++)
     {
         for (int j = i + 1; j < arr.Length; j++)
         {

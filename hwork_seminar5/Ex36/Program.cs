@@ -14,7 +14,7 @@ int[] NewArray(int size, int minval, int maxval)
     return array;
 }
 
-void SummOddIndexNum(int[] arr)
+int SummOddIndexNum(int[] arr)
 {
     int sum = 0;
     for (int i = 0; i < arr.Length; i++)
@@ -24,7 +24,7 @@ void SummOddIndexNum(int[] arr)
             sum += arr[i];
         }
     }
-    Console.WriteLine($"Сумма элементов, стоящих на нечётных позициях: {sum}");
+    return sum;
 }
 
 Console.WriteLine("Введите длину массива: ");
@@ -32,6 +32,7 @@ int n = int.Parse(Console.ReadLine()!);
 
 int[] arr = NewArray(n, -10, 10);
 SummOddIndexNum(arr);
+Console.WriteLine($"Сумма элементов, стоящих на нечётных позициях: {SummOddIndexNum(arr)}");
 Console.WriteLine(String.Join(",", arr));
 
 
